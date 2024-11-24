@@ -201,3 +201,53 @@ autorun/
 ## 로그 확인
 - tail -f ~/workspace/autorun/logs/output.log
 - tail -f ~/workspace/autorun/logs/error.log
+
+---
+
+## Git 사용 가이드
+
+### 초기 설정
+Git을 처음 사용할 때 사용자 정보를 설정합니다:
+```bash
+# Git 사용자 이메일 설정
+git config --global user.email "hyun.lim@okkorea.net"
+
+# Git 사용자 이름 설정
+git config --global user.name "lhg96"
+
+---
+# 1. Git 저장소 초기화
+git init
+
+# 2. README.md 파일 생성 (필요한 경우)
+echo "# autorun" >> README.md
+
+# 3. 파일을 스테이징 영역에 추가
+git add .                # 모든 파일 추가
+git add README.md       # 특정 파일만 추가
+
+# 4. 변경사항 커밋
+git commit -m "first commit"
+
+# 5. 기본 브랜치를 main으로 설정
+git branch -M main
+
+# 6. GitHub 원격 저장소 연결
+git remote add origin https://github.com/lhg96/autorun.git
+
+# 7. GitHub에 푸시
+git push -u origin main
+
+---
+# 수정후 git 업데이트
+# 1. 변경된 파일들의 상태 확인
+git status
+
+# 2. 변경된 모든 파일을 스테이징
+git add .
+
+# 3. 변경사항 커밋
+git commit -m "수정내용을 설명하는 메시지"
+
+# 4. GitHub에 푸시
+git push
