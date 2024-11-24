@@ -214,8 +214,11 @@ git config --global user.email "hyun.lim@okkorea.net"
 
 # Git 사용자 이름 설정
 git config --global user.name "lhg96"
-
+```
 ---
+### Git 저장소 초기화
+새로운 프로젝트를 시작할 때 Git 저장소를 초기화합니다:
+```bash
 # 1. Git 저장소 초기화
 git init
 
@@ -237,9 +240,11 @@ git remote add origin https://github.com/lhg96/autorun.git
 
 # 7. GitHub에 푸시
 git push -u origin main
-
+```
 ---
-# 수정후 git 업데이트
+### Git 저장소에 파일 업데이트
+프로젝트를 업데이트할 때마다 Git 저장소에 파일을 업데이트합니다:
+```bash
 # 1. 변경된 파일들의 상태 확인
 git status
 
@@ -251,3 +256,12 @@ git commit -m "수정내용을 설명하는 메시지"
 
 # 4. GitHub에 푸시
 git push
+```---
+### Git 저장소에서 파일 다운로드
+GitHub에서 파일을 다운로드할 때 사용합니다:
+```bash
+# 1. GitHub에서 프로젝트를 복제
+git clone https://github.com/lhg96/autorun.git
+# 2. 원격 저장소에서 파일을 가져오기
+git pull origin main
+```
